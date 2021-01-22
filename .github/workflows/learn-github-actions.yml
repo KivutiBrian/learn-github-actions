@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Deploy Flask app 
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       with:
         host: ${{ secrets.HOST }} #server ip
         key: ${{ secrets.SSH_KEY }} #private or public key of server
