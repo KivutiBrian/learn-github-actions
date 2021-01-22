@@ -7,9 +7,9 @@ jobs:
       - name: Deploy Flask app 
         uses: actions/checkout@v2
         with:
-          host: ${{secrets.HOST}} #server ip
-          key: ${{secrets.SSH_KEY}} #private or public key of server
-          username: ${{secrets.USERNAME}} #username of the server
+          HOST: ${{secrets.HOST}} #server ip
+          KEY: ${{secrets.SSH_KEY}} #private or public key of server
+          USERNAME: ${{secrets.USERNAME}} #username of the server
           
           script: |
             mkdir test
