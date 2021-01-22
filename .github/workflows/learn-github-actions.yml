@@ -11,7 +11,7 @@ jobs:
           KEY: ${{secrets.SSH_KEY}} #private or public key of server
           USERNAME: ${{secrets.USERNAME}} #username of the server
           
-          script: |
+          script: 
             mkdir test
             cd test
             git clone git@github.com:KivutiBrian/learn-github-actions.git .
