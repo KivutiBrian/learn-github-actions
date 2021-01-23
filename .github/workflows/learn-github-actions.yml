@@ -8,7 +8,7 @@ jobs:
       - name: Deploy Flask app 
         uses: docker://evaneos/ssh-action:0.1.0
         with:
-          host: ${{secrets.HOST}}
+          hosts: ${{secrets.HOST}}
           user: ${{secrets.USER}}
           private_key: ${{secrets.SSH_KEY}}
           commands:
