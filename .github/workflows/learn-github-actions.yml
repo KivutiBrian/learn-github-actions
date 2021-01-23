@@ -5,16 +5,17 @@ jobs:
     runs-on: ubuntu-18.04
     steps: 
       - uses: actions/checkout@v1
-      - name: Deploy Flask app 
-        uses: docker://evaneos/ssh-action:0.1.0
+      - name: Setup DigitalOcean SSH 
+        uses: MrSquaare/ssh-setup-action@v1
         with:
           hosts: ${{secrets.HOST}}
-          user: ${{secrets.USER}}
           private_key: ${{secrets.SSH_KEY}}
-          commands:
-            mkdir test
-            cd test
-            git clone git@github.com:KivutiBrian/learn-github-actions.git 
-            echo 'Deployment successful'
+      -name: Create a folder
+        run: mkdir test
+          # commands:
+          #   mkdir test
+          #   cd test
+          #   git clone git@github.com:KivutiBrian/learn-github-actions.git 
+          #   echo 'Deployment successful'
     
           
