@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps: 
       - name: Setup DigitalOcean SSH 
-        uses: fifsky/ssh-action@master
+        uses: fifsky/ssh-action@V0.1.3
         with:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USERNAME }}
