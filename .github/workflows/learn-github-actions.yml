@@ -8,12 +8,14 @@ jobs:
       - name: Deploy Flask app 
         uses: fifsky/ssh-action@master
         with:
-          host: ${{secrets.HOST}}
-          user: ${{secrets.USER}}
-          key: ${{secrets.SSH_KEY}}
-    
           command: | 
             mkdir test
             cd test
             git clone git@github.com:KivutiBrian/learn-github-actions.git 
             echo 'Deployment successful'
+            
+          host: ${{secrets.HOST}}
+          user: ${{secrets.USER}}
+          key: ${{secrets.SSH_KEY}}
+    
+          
