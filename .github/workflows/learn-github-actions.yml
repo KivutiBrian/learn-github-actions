@@ -3,15 +3,16 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps: 
+    steps: actions/checkout@v1
+      - uses: 
       - name: Deploy Flask app 
-        uses: actions/checkout@v1
+        uses: appleboy/ssh-action@master
         with:
           HOST: ${{secrets.HOST}} #server ip
           KEY: ${{secrets.SSH_KEY}} #private or public key of server
           USERNAME: ${{secrets.USERNAME}} #username of the server
           
-          run: 
+          script: 
             mkdir test
             cd test
             git clone git@github.com:KivutiBrian/learn-github-actions.git 
