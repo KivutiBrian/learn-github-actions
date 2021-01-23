@@ -2,15 +2,15 @@ name: learn-github-actions
 on: [push]
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v1
       - name: Setup DigitalOcean SSH 
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
           script:
             mkdir test
             cd test
