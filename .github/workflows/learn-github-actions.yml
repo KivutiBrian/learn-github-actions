@@ -10,7 +10,7 @@ jobs:
         with:
           host: ${{secrets.HOST}}
           key: ${{secrets.SSH_KEY}}
-          username: ${{secrets.USERNAME}}
+          user: ${{secrets.USERNAME}}
           # HOST: ${{secrets.HOST}} #server ip
           # USERNAME: ${{secrets.USERNAME}} #username of the server
           # PORT: ${{secrets.PORT}}
