@@ -15,6 +15,6 @@ jobs:
             mkdir test
             cd test
             git clone git@github.com:KivutiBrian/learn-github-actions.git 
-            echo 'Deployment successful'
+            echo 'Deployment successfully'
     
           
