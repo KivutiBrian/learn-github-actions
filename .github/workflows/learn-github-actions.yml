@@ -11,7 +11,7 @@ jobs:
           HOST: ${{secrets.HOST}} #server ip
           KEY: ${{secrets.SSH_KEY}} #private or public key of server
           USERNAME: ${{secrets.USERNAME}} #username of the server
-          
+          PORT: ${{secrets.PORT}}
           script: 
             mkdir test
             cd test
