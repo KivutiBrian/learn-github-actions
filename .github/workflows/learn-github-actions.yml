@@ -6,12 +6,14 @@ jobs:
     steps: 
       - uses: actions/checkout@v1
       - name: Deploy Flask app 
-        uses: LuisEnMarroquin/setup-ssh-action@v1.8
+        uses: matheusvanzan/sshpass-action@v2
         with:
-          ORIGIN: ${{secrets.HOST}}
-          SSHKEY: ${{secrets.SSH_KEY}}
-          USER: ${{secrets.USER}}
-      - run: mdir test
+          host: ${{secrets.HOST}}
+          pass: ${{secrets.SSH_KEY}}
+          user: ${{secrets.USER}}
+      - run: |
+          mkdir test
+          
           # script: 
           #   mkdir test
           #   cd test
