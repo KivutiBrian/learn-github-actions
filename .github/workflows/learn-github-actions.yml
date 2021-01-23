@@ -5,16 +5,17 @@ jobs:
     runs-on: ubuntu-18.04
     steps: 
       - name: Setup DigitalOcean SSH 
-        uses: appleboy/ssh-action@0.1.4
+        uses: fifsky/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          user: ${{ secrets.USERNAME }}
+          # username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script:
-            mkdir test
-            cd test
-            git clone git@github.com:KivutiBrian/learn-github-actions.git 
-            echo 'Deployment successfully'
+          # script:
+          #   mkdir test
+          #   cd test
+          #   git clone git@github.com:KivutiBrian/learn-github-actions.git 
+          #   echo 'Deployment successfully'
     
           
