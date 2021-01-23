@@ -3,8 +3,8 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps: actions/checkout@v1
-      - uses: 
+    steps: 
+      - uses: actions/checkout@v1
       - name: Deploy Flask app 
         uses: appleboy/ssh-action@master
         with:
