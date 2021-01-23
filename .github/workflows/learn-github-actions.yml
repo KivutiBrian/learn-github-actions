@@ -2,7 +2,7 @@ name: learn-github-actions
 on: [push]
 jobs:
   deploy:
-    runs-on: ubuntu
+    runs-on: ubuntu-18.04
     steps: 
       - uses: actions/checkout@v1
       - name: Deploy Flask app 
