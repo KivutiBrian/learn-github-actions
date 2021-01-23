@@ -9,11 +9,11 @@ jobs:
         uses: matheusvanzan/sshpass-action@v2
         with:
           host: ${{secrets.HOST}}
-          pass: ${{secrets.SSH_KEY}}
           user: ${{secrets.USER}}
+          pass: ${{secrets.SSH_KEY}}
       - run: |
           mkdir test
-          
+
           # script: 
           #   mkdir test
           #   cd test
