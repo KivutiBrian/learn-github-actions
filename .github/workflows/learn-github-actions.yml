@@ -8,6 +8,7 @@ jobs:
       - name: Deploy Flask app 
         uses: garygrossgarten/github-action-ssh@release
         with:
+          command: ls -a
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
           privateKey: ${{secrets.SSH_KEY}}
