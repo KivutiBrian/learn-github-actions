@@ -6,7 +6,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v1
       - name: Deploy Flask app 
-        uses: appleboy/ssh-action@0.1.2
+        uses: cross-the-world/ssh-pipeline@master
         with:
           host: ${{secrets.HOST}}
           key: ${{secrets.SSH_KEY}}
