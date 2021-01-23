@@ -10,7 +10,7 @@ jobs:
         with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
-          privatekey: ${{secrets.SSH_KEY}}
+          privateKey: ${{secrets.SSH_KEY}}
           script: 
             mkdir test
             cd test
