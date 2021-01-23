@@ -8,8 +8,8 @@ jobs:
       - name: Setup DigitalOcean SSH 
         uses: MrSquaare/ssh-setup-action@v1
         with:
-          hosts: ${{secrets.HOST}}
-          private_key: ${{secrets.SSH_KEY}}
+          host: ${{secrets.HOST}}
+          private_key: ${{ secrets.SSH_KEY }}
       -name: Create a folder
         run: mkdir test
           # commands:
