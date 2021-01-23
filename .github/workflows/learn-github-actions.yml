@@ -6,12 +6,11 @@ jobs:
     steps: 
       - uses: actions/checkout@v1
       - name: Deploy Flask app 
-        uses: garygrossgarten/github-action-ssh@release
+        uses: LuisEnMarroquin/setup-ssh-action@v1.8
         with:
-          command: ls -a
-          host: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          privateKey: ${{secrets.SSH_KEY}}
+          ORIGIN: ${{secrets.HOST}}
+          SSHKEY: ${{secrets.SSH_KEY}}
+          USER: ${{secrets.USER}}
           script: 
             mkdir test
             cd test
