@@ -6,7 +6,6 @@ jobs:
     steps: 
       - uses: actions/checkout@v1
       - name: Deploy Flask app 
-        uses: appleboy/ssh-action@master
         with:
           HOST: ${{secrets.HOST}} #server ip
           USERNAME: ${{secrets.USERNAME}} #username of the server
