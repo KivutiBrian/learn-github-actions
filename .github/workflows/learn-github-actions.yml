@@ -9,7 +9,7 @@ jobs:
         uses: MrSquaare/ssh-setup-action@v1
         with:
           host: ${{secrets.HOST}}
-          private_key: ${{ secrets.SSH_KEY }}
+          private-key: ${{ secrets.SSH_KEY }}
       -name: Create a folder
         run: mkdir test
           # commands:
