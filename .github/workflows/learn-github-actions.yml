@@ -6,15 +6,11 @@ jobs:
     steps: 
       - uses: actions/checkout@v1
       - name: Deploy Flask app 
-        uses: cross-the-world/ssh-pipeline@master
+        uses: garygrossgarten/github-action-ssh@release
         with:
           host: ${{secrets.HOST}}
-          pass: ${{secrets.SSH_KEY}}
-          user: ${{secrets.USERNAME}}
-          # HOST: ${{secrets.HOST}} #server ip
-          # USERNAME: ${{secrets.USERNAME}} #username of the server
-          # PORT: ${{secrets.PORT}}
-          # KEY: ${{secrets.SSH_KEY}} #private or public key of server
+          username: ${{secrets.USERNAME}}
+          privatekey: ${{secrets.SSH_KEY}}
           script: 
             mkdir test
             cd test
