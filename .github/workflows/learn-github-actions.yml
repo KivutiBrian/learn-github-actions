@@ -2,7 +2,7 @@ name: learn-github-actions
 on: [push]
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps: 
       - name: Setup DigitalOcean SSH 
         uses: appleboy/ssh-action@master
